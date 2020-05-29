@@ -1,19 +1,14 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, {Component} from "react";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>DaviApp</Text>
-    </View>
-  );
+import {View, Text} from "react-native";
+
+export default class Main extends Component{
+    render(){
+        return(
+            <View>
+                <Text>Página Principal</Text>
+            </View>
+        );
+        
+    }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
