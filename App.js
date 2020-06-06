@@ -4,6 +4,8 @@ import api from "./src/services/api"
 
 import {View, Text, FlatList, TouchableOpacity, StyleSheet} from "react-native";
 
+
+
 export default class Main extends Component{
 
     static navegationOptions = {
@@ -40,13 +42,13 @@ export default class Main extends Component{
 
     }
 
-    renderItem = ({item}) =>(
+    renderItem = ({item,}) =>(
         <View style={styles.productContainer}>
             <Text style={styles.productTitle}>{item.title}</Text>
             <Text style={styles.productDescription}>{item.description}</Text>
 
-            <TouchableOpacity style={styles.productButton}onPress={()=>{}}>
-                <Text style={styles.productButtonText}>Acessar</Text>
+            <TouchableOpacity style={styles.productButton}onPress={()=>{ this.props.navigation.navigate("Product",{product:item}); }}>
+                <Text style={styles.productButtonText}>Acessarr</Text>
             </TouchableOpacity>
         </View>
     );
